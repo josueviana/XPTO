@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Xpto.Models.OrdemServico>
+
+@{
+    ViewBag.Title = "Ordem de Serviço";
+}
+
+<h2>Ordem de Serviço</h2>
+
+<p>
+    <a href="@Url.Action("Create", "OrdemServico")" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Cadastrar nova OS">
+        <i class="glyphicon glyphicon-plus"></i>
+    </a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nº OS")
+        </th>
+        <th>
+            @Html.DisplayName("Título do Serviço")
+        </th>
+        <th>
+            @Html.DisplayName("CNPJ Cliente")
+        </th>
+        <th>
+            @Html.DisplayName("Nome Cliente")
+        </th>
+        <th>
+            @Html.DisplayName("CPF Prestador do Serviço")
+        </th>
+        <th>
+            @Html.DisplayName("Nome Prestador do Serviço")
+        </th>
+        <th>
+            @Html.DisplayName("Data da Execução")
+        </th>
+        <th>
+            @Html.DisplayName("Valor do Serviço")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDOrdemServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TituloServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFPrestadorServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePrestadorServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataExecucao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorServico)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+                <a href="@Url.Action("Details", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Detalhes">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
+                <a href="@Url.Action("Delete", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Excluir">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

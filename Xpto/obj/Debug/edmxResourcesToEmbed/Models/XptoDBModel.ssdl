@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XptoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="IDOrdemServico" />
+    </Key>
+    <Property Name="IDOrdemServico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TituloServico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CNPJCliente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NomeCliente" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CPFPrestadorServico" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NomePrestadorServico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataExecucao" Type="datetime" Nullable="false" />
+    <Property Name="ValorServico" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="XptoDBModelStoreContainer">
+    <EntitySet Name="OrdemServico" EntityType="Self.OrdemServico" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

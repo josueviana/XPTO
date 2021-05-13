@@ -1,0 +1,88 @@
+﻿@model Xpto.Models.OrdemServico
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>OrdemServico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nº OS")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDOrdemServico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Título do Servico")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TituloServico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("CNPJ Cliente")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nome Cliente")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("CPF Prestador do Serviço")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPFPrestadorServico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nome Prestador do Serviço")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePrestadorServico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Data Execução")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataExecucao)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Valor do Serviço")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorServico)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Editar", "Edit", "OrdemServico", new { id = Model.IDOrdemServico }, new { @class = "btn btn-default" })
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+</p>

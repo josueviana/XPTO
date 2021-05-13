@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XptoDBModelStoreContainer" CdmEntityContainer="XptoDB">
+    <EntitySetMapping Name="OrdemServico">
+      <EntityTypeMapping TypeName="XptoDBModel.OrdemServico">
+        <MappingFragment StoreEntitySet="OrdemServico">
+          <ScalarProperty Name="IDOrdemServico" ColumnName="IDOrdemServico" />
+          <ScalarProperty Name="TituloServico" ColumnName="TituloServico" />
+          <ScalarProperty Name="CNPJCliente" ColumnName="CNPJCliente" />
+          <ScalarProperty Name="NomeCliente" ColumnName="NomeCliente" />
+          <ScalarProperty Name="CPFPrestadorServico" ColumnName="CPFPrestadorServico" />
+          <ScalarProperty Name="NomePrestadorServico" ColumnName="NomePrestadorServico" />
+          <ScalarProperty Name="DataExecucao" ColumnName="DataExecucao" />
+          <ScalarProperty Name="ValorServico" ColumnName="ValorServico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

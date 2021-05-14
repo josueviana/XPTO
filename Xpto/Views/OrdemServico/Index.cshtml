@@ -21,16 +21,7 @@
             @Html.DisplayName("Título do Serviço")
         </th>
         <th>
-            @Html.DisplayName("CNPJ Cliente")
-        </th>
-        <th>
             @Html.DisplayName("Nome Cliente")
-        </th>
-        <th>
-            @Html.DisplayName("CPF Prestador do Serviço")
-        </th>
-        <th>
-            @Html.DisplayName("Nome Prestador do Serviço")
         </th>
         <th>
             @Html.DisplayName("Data da Execução")
@@ -51,16 +42,7 @@
                 @Html.DisplayFor(modelItem => item.TituloServico)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CNPJCliente)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.NomeCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPFPrestadorServico)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomePrestadorServico)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DataExecucao)
@@ -71,9 +53,6 @@
             <td>
                 <a href="@Url.Action("Edit", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="glyphicon glyphicon-pencil"></i>
-                </a>
-                <a href="@Url.Action("Details", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Detalhes">
-                    <i class="glyphicon glyphicon-search"></i>
                 </a>
                 <a href="@Url.Action("Delete", "OrdemServico", new { id = item.IDOrdemServico })" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Excluir">
                     <i class="glyphicon glyphicon-remove"></i>
